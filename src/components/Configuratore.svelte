@@ -12,6 +12,7 @@
     (accumulator, currentValue) => accumulator + currentValue,
     0
   );
+
 </script>
 
 <div class="flex flex-col gap-2">
@@ -22,8 +23,10 @@
         <option value={price}>{option} (+{price} €)</option>
       {/each}
     </select>
-    <hr class="text-neutral-500" />
+    <hr class="text-neutral-500 my-2" />
   {/each}
 
-  <div class="border p-2 rounded-lg shadow-lg">Totale: {total} €</div>
+  <div>Totale: {total} €</div>
+
+  <button class="btn btn-primary">Contattami per ordinarlo</button>
 </div>

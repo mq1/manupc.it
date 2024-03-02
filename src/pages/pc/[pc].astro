@@ -16,14 +16,16 @@ const details = bases[pc];
 
 <Layout title={`ManuPC | ${details.name}`}>
   <div class="flex h-full w-full items-center justify-center">
-    <div class="border p-4 rounded-lg shadow-xl bg-base-300">
-      <img src={details.image} class="h-48" />
-      <h1 class="text-3xl">{details.name}</h1>
-      <p>{details.description}</p>
+    <div class="card bg-base-100 shadow-xl">
+      <figure><img src={details.image} class="h-48" /></figure>
+      <div class="card-body">
+        <h1 class="card-title">{details.name}</h1>
+        <p>{details.description}</p>
 
-      <hr class="text-neutral-500 m-4" />
+        <hr class="text-neutral-500 m-4" />
 
-      <Configuratore pc={pc} client:only />
+        <Configuratore pc={pc} client:only />
+      </div>
     </div>
   </div>
 </Layout>
