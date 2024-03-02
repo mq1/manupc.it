@@ -16,36 +16,18 @@ const { title } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body>
-		<slot />
+	<body class="flex flex-col w-full h-screen items-center justify-between bg-neutral-100">
+		<div class="navbar bg-base-100">
+			<a class="btn btn-ghost text-xl" href="/">
+				<img src="/logo.jpeg" class="h-8 rounded-lg" />
+				ManuPC.it
+			</a>
+		</div>
+		<main>
+			<slot />
+		</main>
+		<footer class="m-2">
+			Copyright (c) 2024 Quarneti Manuel
+		</footer>
 	</body>
 </html>
-<style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
-		background-size: 224px;
-	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
-	}
-</style>
