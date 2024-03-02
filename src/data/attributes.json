@@ -1,0 +1,35 @@
+{
+    "cpu-am4": {
+        "label": "Processore",
+        "options": {
+            "Ryzen 3 4300G": 125
+        }
+    },
+    "ram": {
+        "label": "RAM",
+        "options": {
+            "8GB": 25
+        }
+    },
+    "ssd": {
+        "label": "SSD",
+        "options": {
+            "250GB": 30
+        }
+    },
+    "wifi": {
+        "label": "Wi-Fi",
+        "options": {
+            "No": 0,
+            "Sì": 25    
+        }
+    },
+    "os": {
+        "label": "Sistema Operativo",
+        "options": {
+            "Linux Mint": 0,
+            "Windows 10 Home": 25,
+            "Windows 10 Pro": 35
+        }
+    }
+}

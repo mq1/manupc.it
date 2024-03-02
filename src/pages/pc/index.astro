@@ -1,0 +1,19 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import bases from '../../data/bases.json';
+---
+
+<Layout title="ManuPC | PC">
+	{Object.entries(bases).map(([id, properties]) =>
+        <div class="card max-w-96 bg-base-100 shadow-xl">
+            <figure><img src={properties.image} class="h-32 w-fit self-center" /></figure>
+            <div class="card-body">
+                <h2 class="card-title">{properties.name}</h2>
+                <p>{properties.description}</p>
+                <div class="card-actions justify-end">
+                    <a class="btn btn-primary" href={`/pc/${id}`}>Configura ora 🛠️</a>
+                </div>
+            </div>
+        </div>
+    )}
+</Layout>

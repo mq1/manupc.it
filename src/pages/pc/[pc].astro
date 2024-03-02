@@ -1,0 +1,29 @@
+---
+import type { GetStaticPaths } from "astro";
+import bases from "../../data/bases.json";
+import Layout from "../../layouts/Layout.astro";
+import Configuratore from "../../components/Configuratore.svelte";
+
+export const getStaticPaths = (() =>
+  Object.keys(bases).map((id) => ({
+    params: { pc: id },
+  }))) satisfies GetStaticPaths;
+
+const { pc } = Astro.params;
+
+const details = bases[pc];
+---
+
+<Layout title={`ManuPC | ${details.name}`}>
+  <div class="flex h-full w-full items-center justify-center">
+    <div class="border p-4 rounded-lg shadow-xl bg-base-300">
+      <img src={details.image} class="h-48" />
+      <h1 class="text-3xl">{details.name}</h1>
+      <p>{details.description}</p>
+
+      <hr class="text-neutral-500 m-4" />
+
+      <Configuratore pc={pc} client:only />
+    </div>
+  </div>
+</Layout>
