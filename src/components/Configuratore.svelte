@@ -9,10 +9,19 @@
   let priceMap = {};
 
   $: total = properties.price + Object.values(priceMap).reduce(
-    (accumulator, currentValue) => accumulator + currentValue,
+    (accumulator, currentValue) => accumulator + currentValue[1],
     0
   );
 
+  $: email = (priceMap => {
+    let text = `Ciao, vorrei ordinare questo PC<br>${properties.name}`;
+
+    properties.attributes.forEach(attribute => {
+        let tmp = `${attributes[attribute].label}: `;
+    });
+
+    return text;
+  })();
 </script>
 
 <div class="flex flex-col gap-2">
@@ -20,7 +29,7 @@
     <p>{attributes[attribute].label}</p>
     <select bind:value={priceMap[attribute]}>
       {#each Object.entries(attributes[attribute].options) as [option, price]}
-        <option value={price}>{option} (+{price} €)</option>
+        <option value={[option, price]}>{option} (+{price} €)</option>
       {/each}
     </select>
     <hr class="text-neutral-500 my-2" />
@@ -28,5 +37,10 @@
 
   <div>Totale: {total} €</div>
 
-  <button class="btn btn-primary">Contattami per ordinarlo</button>
+  <a
+    class="btn btn-primary"
+    href={`mailto:manu@manupc.it?subject=Ordine&body=${email}`}
+    >
+      Contattami per ordinarlo
+  </a>
 </div>
