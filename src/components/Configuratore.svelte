@@ -9,11 +9,11 @@
   let priceMap = {};
 
   const sendEmail = () => {
-    let text = `mailto:manu@manupc.it?subject=Ordine&body=Ciao, vorrei ordinare questo PC<br><br>${properties.name} (${properties.price} €)`;
+    let text = `mailto:manu@manupc.it?subject=Ordine&body=Ciao, vorrei ordinare questo PC<br><br>${properties.name}`;
 
     if (priceMap !== undefined) {
       Object.entries(priceMap).forEach(([attribute, selected]) => {
-        text += `<br>${attributes[attribute].label}: ${selected[0]} (+${selected[1]} €)`;
+        text += `<br>${attributes[attribute].label}: ${selected[0]}`;
       });
     }
 
@@ -42,7 +42,7 @@
   {/each}
 
   <hr class="text-neutral-500 my-8" />
-  <p class="text-center">Totale: {total} €</p>
+  <p class="text-center">Totale: {total} € + 10€ di spedizione</p>
 
   <button class="btn btn-primary" on:click={sendEmail}>Contattami per ordinarlo</button>
   <p class="text-sm text-center">
