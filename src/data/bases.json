@@ -1,10 +1,18 @@
 {
     "asrock-deskmini-x300": {
-        "name": "Asrock DeskMini x300",
+        "name": "Asrock DeskMini X300",
         "attributes": ["cpu-am4", "ram", "ssd", "wifi", "os"],
         "image": "/DeskMini X300 Series(L1).png",
         "description": "Un mini PC compatto ed economico!",
         "price": 200,
+        "size": "155 x 155 x 80 mm"
+    },
+    "asrock-deskmini-b760": {
+        "name": "Asrock DeskMini B760",
+        "attributes": ["cpu-lga1700", "ram", "ssd", "wifi", "os"],
+        "image": "/DeskMini B760 Series(L1).png",
+        "description": "Con i potenti processori Intel di ultima generazione!",
+        "price": 275,
         "size": "155 x 155 x 80 mm"
     }
 }

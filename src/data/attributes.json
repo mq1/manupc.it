@@ -8,6 +8,15 @@
             "Ryzen 7 5700G": 270
         }
     },
+    "cpu-lga1700": {
+        "label": "Processore",
+        "options": {
+            "Intel Core i3-12100": 175,
+            "Intel Core i5-12400": 220,
+            "Intel Core i5-13400": 355,
+            "Intel Core i5-14500": 385
+        }
+    },
     "ram": {
         "label": "RAM",
         "options": {
