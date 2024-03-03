@@ -1,14 +1,38 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="ManuPC">
-	<div class="flex flex-col gap-y-4 h-full justify-center items-center">
-		<img src="/logo.jpeg" class="h-48 mb-8 rounded-xl" />
-		<h1 class="text-5xl">ManuPC.it</h1>
-		<p>Il tuo mini PC, personalizzato da te per le tue esigenze</p>
-		<a href="/pc" class="btn btn-primary">
-			Vedi tutti i PC ➡️
-		</a>	
-	</div>
+  <div class="flex flex-col h-full gap-16 justify-center">
+    <div class="flex flex-col gap-y-4 justify-center items-center">
+      <img src="/logo.jpeg" class="h-48 mb-8 rounded-xl" />
+      <h1 class="text-5xl">ManuPC.it</h1>
+      <p>Il tuo mini PC, come lo vuoi tu</p>
+      <a href="/pc" class="btn btn-primary"> Vedi tutti i PC ➡️</a>
+    </div>
+
+    <div class="flex gap-4 justify-center">
+      <div class="card w-72 bg-base-100 shadow-xl">
+        <figure><img src="/italia.png" class="h-48"/></figure>
+        <div class="card-body">
+          <h2 class="card-title">Made in Italy</h2>
+          <p>Tutti i PC personalizzati sono assemblati in Italia!</p>
+        </div>
+      </div>
+      <div class="card w-72 bg-base-100 shadow-xl">
+        <figure><img src="/personalizzati.png" class="h-48"/></figure>
+        <div class="card-body">
+          <h2 class="card-title">Mini PC personalizzati</h2>
+          <p>Scegli tu i componenti del tuo pc in base alle tue esigenze!</p>
+        </div>
+      </div>
+      <div class="card w-72 bg-base-100 shadow-xl">
+        <figure><img src="/ricondizionati.png" class="h-48"/></figure>
+        <div class="card-body">
+          <h2 class="card-title">Coming Soon!</h2>
+          <p>Presto saranno disponibili anche PC ricondizionati!</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </Layout>
