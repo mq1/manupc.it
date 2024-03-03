@@ -8,42 +8,46 @@
 
   let priceMap = {};
 
-  $: total = properties.price + Object.values(priceMap).reduce(
-    (accumulator, currentValue) => accumulator + currentValue[1],
-    0
-  );
+  const sendEmail = () => {
+    let text = `mailto:manu@manupc.it?subject=Ordine&body=Ciao, vorrei ordinare questo PC<br><br>${properties.name} (${properties.price} €)`;
 
-  $: email = (priceMap => {
-    let text = `Ciao, vorrei ordinare questo PC<br>${properties.name}`;
+    if (priceMap !== undefined) {
+      Object.entries(priceMap).forEach(([attribute, selected]) => {
+        text += `<br>${attributes[attribute].label}: ${selected[0]} (+${selected[1]} €)`;
+      });
+    }
 
-    properties.attributes.forEach(attribute => {
-        let tmp = `${attributes[attribute].label}: `;
-    });
+    window.location.href = text
+  };
 
-    return text;
-  })();
+  $: total =
+    properties.price +
+    Object.values(priceMap).reduce(
+      (accumulator, currentValue) => accumulator + currentValue[1],
+      0,
+    );
 </script>
 
 <div class="flex flex-col gap-2">
   <p>Base: {properties.price} €</p>
-  <hr class="text-neutral-500 my-2" />
 
   {#each properties.attributes as attribute}
+    <hr class="text-neutral-500 my-2" />
     <p>{attributes[attribute].label}</p>
     <select bind:value={priceMap[attribute]}>
       {#each Object.entries(attributes[attribute].options) as [option, price]}
         <option value={[option, price]}>{option} (+{price} €)</option>
       {/each}
     </select>
-    <hr class="text-neutral-500 my-2" />
   {/each}
 
-  <div>Totale: {total} €</div>
+  <hr class="text-neutral-500 my-8" />
+  <p class="text-center">Totale: {total} €</p>
 
-  <a
-    class="btn btn-primary"
-    href={`mailto:manu@manupc.it?subject=Ordine&body=${email}`}
+  <button class="btn btn-primary" on:click={sendEmail}>Contattami per ordinarlo</button>
+  <p class="text-sm text-center">
+    O invia una email a <a href="mailto:manu@manupc.it" class="text-primary"
+      >manu@manupc.it</a
     >
-      Contattami per ordinarlo
-  </a>
+  </p>
 </div>
