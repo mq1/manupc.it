@@ -25,6 +25,9 @@
 </script>
 
 <div class="flex flex-col gap-2">
+  <p>Base: {properties.price} €</p>
+  <hr class="text-neutral-500 my-2" />
+
   {#each properties.attributes as attribute}
     <p>{attributes[attribute].label}</p>
     <select bind:value={priceMap[attribute]}>
