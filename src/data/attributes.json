@@ -2,19 +2,25 @@
     "cpu-am4": {
         "label": "Processore",
         "options": {
-            "Ryzen 3 4300G": 125
+            "Ryzen 3 4300G": 125,
+            "Ryzen 5 4600G": 140,
+            "Ryzen 5 5600G": 175,
+            "Ryzen 7 5700G": 270
         }
     },
     "ram": {
         "label": "RAM",
         "options": {
-            "8GB": 25
+            "8GB": 25,
+            "16GB": 50
         }
     },
     "ssd": {
         "label": "SSD",
         "options": {
-            "250GB": 30
+            "250GB": 30,
+            "500GB": 50,
+            "1TB": 80
         }
     },
     "wifi": {
@@ -27,9 +33,9 @@
     "os": {
         "label": "Sistema Operativo",
         "options": {
-            "Linux Mint": 0,
             "Windows 10 Home": 25,
-            "Windows 10 Pro": 35
+            "Windows 10 Pro": 35,
+            "Linux Mint": 0
         }
     }
 }

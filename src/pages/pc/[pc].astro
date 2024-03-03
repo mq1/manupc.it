@@ -16,7 +16,7 @@ const details = bases[pc];
 
 <Layout title={`ManuPC | ${details.name}`}>
   <div class="flex 2xl:h-full w-full items-center justify-center">
-    <div class="card bg-base-100 shadow-xl">
+    <div class="card max-w-96 bg-base-100 shadow-xl">
       <figure><img src={details.image} class="h-48" /></figure>
       <div class="card-body">
         <h1 class="card-title">{details.name}</h1>
@@ -25,6 +25,10 @@ const details = bases[pc];
         <hr class="text-neutral-500 m-4" />
 
         <Configuratore pc={pc} client:only />
+
+        <hr class="text-neutral-500 m-4" />
+
+        <p class="text-sm">Assicurati di avere un account PayPal prima di proseguire, i pagamenti vengono processati su questa piattaforma</p>
       </div>
     </div>
   </div>
