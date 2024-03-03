@@ -4,7 +4,7 @@ import bases from '../../data/bases.json';
 ---
 
 <Layout title="ManuPC | PC">
-    <div class="flex gap-4">
+    <div class="flex flex-wrap gap-4">
         {Object.entries(bases).map(([id, properties]) =>
             <div class="card max-w-96 bg-base-100 shadow-xl">
                 <figure><img src={properties.image} class="h-32 self-center" /></figure>
