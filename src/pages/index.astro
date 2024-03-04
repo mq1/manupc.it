@@ -3,7 +3,7 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="ManuPC">
-  <div class="flex flex-col h-full gap-16 2xl:justify-center">
+  <div class="flex flex-col h-full gap-16 2xl:justify-center items-center">
     <div class="flex flex-col gap-y-4 justify-center items-center">
       <img src="/logo.jpeg" class="h-48 mb-8 rounded-xl" />
       <h1 class="text-5xl">ManuPC.it</h1>
@@ -12,26 +12,43 @@ import Layout from "../layouts/Layout.astro";
       <p class="text-center">Non sai cosa scegliere? Scrivimi a <a href="mailto:manupc.it" class="text-primary">manu@manupc.it</a>
     </div>
 
+    <div class="divider" />
+
+    <h2 class="text-xl sm:text-3xl -mb-8">✅ Perchè scegliere i miei mini PC?</h2>
+
     <div class="flex flex-wrap gap-4 justify-center">
       <div class="card w-72 bg-base-100 shadow-xl">
-        <figure><img src="/italia.png" class="h-48"/></figure>
+        <figure class="px-10 pt-10">
+          <span class="text-9xl">🇮🇹</span>
+        </figure>
         <div class="card-body">
           <h2 class="card-title">Made in Italy</h2>
-          <p>Tutti i PC personalizzati sono assemblati in Italia!</p>
+          <p>Tutti i PC personalizzati sono assemblati in Italia! 🍕</p>
         </div>
       </div>
       <div class="card w-72 bg-base-100 shadow-xl">
-        <figure><img src="/personalizzati.png" class="h-48"/></figure>
+        <figure class="px-10 pt-10">
+          <span class="text-9xl">🧑🏻‍💻</span>
+        </figure>
         <div class="card-body">
-          <h2 class="card-title">Mini PC personalizzati</h2>
-          <p>Scegli tu i componenti del tuo pc in base alle tue esigenze!</p>
+          <h2 class="card-title">Personalizzati</h2>
+          <p>
+            Scegli tu i componenti del tuo pc in base alle tue esigenze!
+            Io provvederò a recuperare tutti i componenti e ad assemblarlo per te 🤖
+          </p>
         </div>
       </div>
       <div class="card w-72 bg-base-100 shadow-xl">
-        <figure><img src="/ricondizionati.png" class="h-48"/></figure>
+        <figure class="px-10 pt-10">
+          <span class="text-9xl">🛠️</span>
+        </figure>
         <div class="card-body">
-          <h2 class="card-title">Coming Soon!</h2>
-          <p>Presto saranno disponibili anche PC ricondizionati!</p>
+          <h2 class="card-title">Espandibili</h2>
+          <p>
+            Invece di buttare il vecchio mini PC (come accade purtroppo con molti mini PC),
+            puoi potenziare quello che hai già!
+            Presto saranno disponibili anche delle guide per aiutarti in questa impresa 🔧
+          </p>
         </div>
       </div>
     </div>
