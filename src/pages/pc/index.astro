@@ -7,7 +7,7 @@ import bases from '../../data/bases.json';
     <div class="flex flex-wrap gap-4">
         {Object.entries(bases).map(([id, properties]) =>
             <div class="card max-w-96 bg-base-100 shadow-xl">
-                <figure><img src={properties.image} class="h-32 self-center" /></figure>
+                <figure><img src={properties.images[0]} class="h-32 self-center" /></figure>
                 <div class="card-body">
                     <h2 class="card-title">{properties.name}</h2>
                     <p>{properties.description}</p>

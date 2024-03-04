@@ -37,7 +37,21 @@
         "label": "Wi-Fi",
         "options": {
             "No": 0,
-            "Sì": 25    
+            "Sì": 25
+        }
+    },
+    "vesa": {
+        "label": "Adattatore VESA",
+        "options": {
+            "No": 0,
+            "Sì": 10
+        }
+    },
+    "usb2": {
+        "label": "2x porte USB 2.0 aggiuntive",
+        "options": {
+            "No": 0,
+            "Sì": 10
         }
     },
     "os": {
