@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { Icon } from 'astro-icon/components';
 ---
 
 <Layout title="ManuPC">
@@ -8,18 +9,21 @@ import Layout from "../layouts/Layout.astro";
       <img src="/logo.jpeg" class="h-48 mb-8 rounded-xl" />
       <h1 class="text-5xl">ManuPC.it</h1>
       <p>Il tuo mini PC, come lo vuoi tu</p>
-      <a href="/pc" class="btn btn-primary">Vedi tutti i PC ➡️</a>
+      <a href="/pc" class="btn btn-primary">Vedi tutti i PC →</a>
       <p class="text-center">Non sai cosa scegliere? Scrivimi a <a href="mailto:manupc.it" class="text-primary">manu@manupc.it</a>
     </div>
 
     <div class="divider" />
 
-    <h2 class="text-xl sm:text-3xl -mb-8">⭐️ Perchè scegliere i miei mini PC?</h2>
+    <h2 class="text-xl sm:text-3xl -mb-8 flex items-center gap-2">
+      <Icon name="noto:star" />
+      Perchè scegliere i miei mini PC?
+    </h2>
 
     <div class="flex flex-wrap gap-4 justify-center">
       <div class="card w-72 bg-base-100 shadow-xl">
         <figure class="px-10 pt-10">
-          <span class="text-9xl">✅</span>
+          <Icon name="noto:ok-hand-light-skin-tone" class="text-9xl" />
         </figure>
         <div class="card-body">
           <h2 class="card-title">Garanzia e assistenza</h2>
@@ -32,7 +36,7 @@ import Layout from "../layouts/Layout.astro";
       </div>
       <div class="card w-72 bg-base-100 shadow-xl">
         <figure class="px-10 pt-10">
-          <span class="text-9xl">🧑🏻‍💻</span>
+          <Icon name="noto:man-technologist-light-skin-tone" class="text-9xl" />
         </figure>
         <div class="card-body">
           <h2 class="card-title">Personalizzati</h2>
@@ -44,7 +48,7 @@ import Layout from "../layouts/Layout.astro";
       </div>
       <div class="card w-72 bg-base-100 shadow-xl">
         <figure class="px-10 pt-10">
-          <span class="text-9xl">🛠️</span>
+          <Icon name="noto:hammer-and-wrench" class="text-9xl" />
         </figure>
         <div class="card-body">
           <h2 class="card-title">Espandibili</h2>
