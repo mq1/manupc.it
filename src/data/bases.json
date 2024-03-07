@@ -8,7 +8,8 @@
             "https://asrock.com/nettop/photo/DeskMini%20X300%20Series(L3).png",
             "https://asrock.com/nettop/photo/DeskMini%20X300%20Series(L4).png"
         ],
-        "description": "Un mini PC compatto ed economico! Basato su Asrock DeskMini X300 ",
+        "description": "Un mini PC compatto ed economico! Basato su Asrock DeskMini X300",
+        "link": "https://asrock.com/nettop/AMD/DeskMini%20X300%20Series/index.it.asp",
         "price": 200,
         "size": "155 x 155 x 80 mm"
     },
@@ -22,6 +23,7 @@
             "https://asrock.com/nettop/photo/DeskMini%20B760%20Series(L4).png"
         ],
         "description": "Con i potenti processori Intel di ultima generazione! Basato su Asrock DeskMini B760",
+        "link": "https://asrock.com/nettop/Intel/DeskMini%20B760%20Series/index.it.asp",
         "price": 275,
         "size": "155 x 155 x 80 mm"
     }
