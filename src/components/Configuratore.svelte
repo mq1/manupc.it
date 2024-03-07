@@ -29,7 +29,7 @@
 </script>
 
 <div class="flex flex-col gap-2">
-  <p>PC Base: {properties.price} €</p>
+  <p>PC base: {properties.price} €</p>
 
   {#each properties.attributes as attribute}
     <hr class="text-neutral-500 my-2" />
