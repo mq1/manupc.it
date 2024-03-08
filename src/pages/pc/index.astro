@@ -1,21 +1,43 @@
 ---
-import Layout from '../../layouts/Layout.astro';
-import bases from '../../data/bases.json';
+import Layout from "../../layouts/Layout.astro";
+import bases from "../../data/bases.json";
 ---
 
 <Layout title="ManuPC | PC">
-    <div class="flex flex-wrap gap-4">
-        {Object.entries(bases).map(([id, properties]) =>
-            <div class="card max-w-96 bg-base-100 shadow-xl">
-                <figure><img src={properties.images[0]} class="h-32 self-center" /></figure>
-                <div class="card-body">
-                    <h2 class="card-title">{properties.name}</h2>
-                    <p>{properties.description}</p>
-                    <div class="card-actions justify-end">
-                        <a class="btn btn-primary" href={`/pc/${id}`}>Configura ora 🛠️</a>
+    <div class="flex flex-wrap gap-4 h-full items-center justify-center">
+        {
+            Object.entries(bases).map(([id, properties]) => (
+                <div class="card w-96 h-[512px] bg-base-100 shadow-xl">
+                    <figure class="flex-col">
+                        <div class="carousel w-full">
+                            {properties.images.map((image: string, i: number) => (
+                                <div
+                                    id={`${id}-${i}`}
+                                    class="carousel-item w-full"
+                                >
+                                    <img src={image} class="w-full h-fit" />
+                                </div>
+                            ))}
+                        </div>
+                        <div class="flex justify-center w-full py-2 gap-2">
+                            {properties.images.map((image: string, i: number) => (
+                                <a href={`#${id}-${i}`} class="btn btn-xs">
+                                    {i + 1}
+                                </a>
+                            ))}
+                        </div>
+                    </figure>
+                    <div class="card-body">
+                        <h2 class="card-title">{properties.name}</h2>
+                        <p>{properties.shortdesc}</p>
+                        <div class="card-actions justify-end mt-4">
+                            <a class="btn btn-primary w-full" href={`/pc/${id}`}>
+                                Configura ora 🛠️
+                            </a>
+                        </div>
                     </div>
                 </div>
-            </div>
-        )}    
+            ))
+        }
     </div>
 </Layout>
