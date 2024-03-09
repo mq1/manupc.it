@@ -35,7 +35,9 @@
         "images": [
             "/src/assets/nr200p_colour_webpages_4000x4000_gallery-13-zoom.png",
             "/src/assets/nr200p_colour_webpages_4000x4000_gallery-1-zoom.png",
-            "/src/assets/nr200p_colour_webpages_4000x4000_gallery-16-zoom.png"
+            "/src/assets/nr200p_colour_webpages_4000x4000_gallery-16-zoom.png",
+            "/src/assets/nr200p-gallery-1-zoom.png",
+            "/src/assets/nr200p-gallery-10-zoom.png"
         ],
         "shortdesc": "Per chi vuole giocare, ma senza rinunciare allo spazio",
         "description": "Basato su CoolerMaster MasterBox NR200P",
