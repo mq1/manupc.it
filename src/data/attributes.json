@@ -68,5 +68,16 @@
             "Windows 10 Pro": 35,
             "Linux Mint": 0
         }
+    },
+    "nr200p": {
+        "label": "Case",
+        "options": {
+            "Nero": 110,
+            "Bianco": 115,
+            "Rosa": 125,
+            "Azzurro": 145,
+            "Viola": 145,
+            "Arancione": 205
+        }
     }
 }

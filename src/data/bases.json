@@ -31,17 +31,18 @@
     },
     "coolermaster-masterbox-nr200p": {
         "name": "Mini PC Gaming Intel Colorato",
-        "attributes": ["cpu-lga1700", "ram", "gpu", "ssd", "os"],
+        "attributes": ["nr200p", "cpu-lga1700", "ram", "gpu", "ssd", "os"],
         "images": [
             "/src/assets/nr200p_colour_webpages_4000x4000_gallery-13-zoom.png",
             "/src/assets/nr200p_colour_webpages_4000x4000_gallery-1-zoom.png",
             "/src/assets/nr200p_colour_webpages_4000x4000_gallery-16-zoom.png",
+            "/src/assets/nr200p_colour_webpages_4000x4000_gallery-6-zoom.png",
             "/src/assets/nr200p-gallery-1-zoom.png",
             "/src/assets/nr200p-gallery-10-zoom.png"
         ],
         "shortdesc": "Per chi vuole giocare, ma senza rinunciare allo spazio",
         "description": "Basato su CoolerMaster MasterBox NR200P",
-        "price": 465,
+        "price": 315,
         "size": "376 x 185 x 292 mm"
     }
 }
