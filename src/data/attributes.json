@@ -36,7 +36,8 @@
     "gpu": {
         "label": "Scheda video",
         "options": {
-            "RX6400": 165
+            "AMD Radeon RX6400": 165,
+            "Intel Arc A580": 255
         }
     },
     "wifi": {
