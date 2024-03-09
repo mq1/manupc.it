@@ -1,4 +1,7 @@
 ---
+import { Image } from "astro:assets";
+import logoImage from "../assets/logo.jpeg";
+
 interface Props {
 	title: string;
 }
@@ -19,18 +22,33 @@ const { title } = Astro.props;
 	<body class="flex flex-col w-full h-screen items-center">
 		<div class="navbar bg-base-100">
 			<a class="btn btn-ghost text-xl" href="/">
-				<img src="/logo.jpeg" class="h-8 rounded-lg" />
+				<Image
+					src={logoImage}
+					alt="logo"
+					width={32}
+					class="rounded-lg"
+				/>
 				ManuPC.it
 			</a>
 		</div>
 		<main class="w-full flex-1 p-4 bg-base-200">
 			<slot />
 		</main>
-		<footer class="text-sm p-10 bg-base-100 w-full flex flex-col gap-8 items-center justify-center">
+		<footer
+			class="text-sm p-10 bg-base-100 w-full flex flex-col gap-8 items-center justify-center"
+		>
 			<p class="flex gap-8">
-				<a href="https://www.instagram.com/manupc.it/" class="text-rose-500 font-bold">Instagram ↗</a>
-				<a href="https://www.tiktok.com/@manupc.it" class="text-blue-500 font-bold">TikTok ↗</a>	
-				<a href="mailto:manu@manupc.it" class="font-bold">manu@manupc.it</a>	
+				<a
+					href="https://www.instagram.com/manupc.it/"
+					class="text-rose-500 font-bold">Instagram ↗</a
+				>
+				<a
+					href="https://www.tiktok.com/@manupc.it"
+					class="text-blue-500 font-bold">TikTok ↗</a
+				>
+				<a href="mailto:manu@manupc.it" class="font-bold"
+					>manu@manupc.it</a
+				>
 			</p>
 			<div class="flex divide-x-2 divide-neutral-400">
 				<p class="px-2">Copyright (c) 2024 Quarneti Manuel</p>

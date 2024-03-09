@@ -3,6 +3,7 @@ import type { GetStaticPaths } from "astro";
 import bases from "../../data/bases.json";
 import Layout from "../../layouts/Layout.astro";
 import Configuratore from "../../components/Configuratore.svelte";
+import PcCarousel from "../../components/PcCarousel.astro";
 
 export const getStaticPaths = (() =>
   Object.keys(bases).map((id) => ({
@@ -18,28 +19,27 @@ const details = bases[pc];
   <div class="flex w-full items-center justify-center">
     <div class="card max-w-96 bg-base-100 shadow-xl">
       <figure class="flex flex-col">
-        <div class="carousel w-full">
-          {
-            details.images.map((image: string, i: number) => 
-              <div id={`image${i}`} class="carousel-item w-full">
-                <img src={image} class="w-full" />
-              </div>
-            )
-          }
-        </div>
-        <div class="flex justify-center w-full py-2 gap-2">
-          {
-            details.images.map((image: string, i: number) => 
-              <a href={`#image${i}`} class="btn btn-xs">{i+1}</a>
-            )
-          }
-        </div>
+        <PcCarousel id={pc} imagePaths={details.images} />
       </figure>
       <div class="card-body">
         <h1 class="card-title">{details.name}</h1>
         <p>{details.description}</p>
         <p>Dimensioni: {details.size}</p>
-        <p>Per saperne di più clicca <a href={details.link} target="_blank" class="text-primary">questo link</a></p>
+
+        {
+          () => {
+            if (details.link) {
+              return (
+                <p>
+                  Per saperne di più clicca{" "}
+                  <a href={details.link} target="_blank" class="text-primary">
+                    questo link
+                  </a>
+                </p>
+              );
+            }
+          }
+        }
 
         <hr class="text-neutral-500 m-4" />
 
@@ -47,7 +47,10 @@ const details = bases[pc];
 
         <hr class="text-neutral-500 m-4" />
 
-        <p class="text-sm">Assicurati di avere un account PayPal prima di proseguire, i pagamenti vengono processati su questa piattaforma</p>
+        <p class="text-sm">
+          Assicurati di avere un account PayPal prima di proseguire, i pagamenti
+          vengono processati su questa piattaforma
+        </p>
       </div>
     </div>
   </div>

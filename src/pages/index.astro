@@ -1,12 +1,14 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import { Icon } from 'astro-icon/components';
+import { Image } from 'astro:assets';
+import logoImage from "../assets/logo.jpeg";
 ---
 
 <Layout title="ManuPC">
   <div class="flex flex-col gap-16 items-center">
     <div class="flex flex-col gap-y-4 justify-center items-center">
-      <img src="/logo.jpeg" class="h-48 mb-8 rounded-xl" />
+      <Image src={logoImage} alt="logo" height={200} class="mb-8 rounded-xl" />
       <h1 class="text-5xl">ManuPC.it</h1>
       <p>Il tuo mini PC, come lo vuoi tu</p>
       <a href="/pc" class="btn btn-primary">Inizia la configurazione del tuo PC →</a>

@@ -1,0 +1,44 @@
+---
+import type { ImageMetadata } from "astro";
+import { Image } from "astro:assets";
+
+interface Props {
+    id: string;
+    imagePaths: string[];
+}
+
+const { id, imagePaths } = Astro.props;
+const images = import.meta.glob<{ default: ImageMetadata }>(
+    "/src/assets/*.{jpeg,jpg,png,gif}",
+);
+---
+
+<div class="carousel w-full">
+    {
+        imagePaths.map((path: string, i: number) => {
+            if (!images[path])
+                throw new Error(
+                    `"${path}" does not exist in glob: "src/assets/*.{jpeg,jpg,png,gif}"`,
+                );
+
+            return (
+                <div id={`${id}-${i}`} class="carousel-item w-full">
+                    <Image
+                        src={images[path]()}
+                        alt={`${id}-${i}`}
+                        class="w-full object-contain"
+                    />
+                </div>
+            );
+        })
+    }
+</div>
+<div class="flex justify-center w-full py-2 gap-2">
+    {
+        imagePaths.map((path: string, i: number) => (
+            <a href={`#${id}-${i}`} class="btn btn-xs">
+                {i + 1}
+            </a>
+        ))
+    }
+</div>

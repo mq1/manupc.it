@@ -3,14 +3,14 @@
         "name": "Mini PC AMD",
         "attributes": ["cpu-am4", "ram", "ssd", "wifi", "vesa", "usb2", "os"],
         "images": [
-            "https://asrock.com/nettop/photo/DeskMini%20X300%20Series(L1).png",
-            "https://asrock.com/nettop/photo/DeskMini%20X300%20Series(L2).png",
-            "https://asrock.com/nettop/photo/DeskMini%20X300%20Series(L3).png",
-            "https://asrock.com/nettop/photo/DeskMini%20X300%20Series(L4).png"
+            "/src/assets/DeskMini X300 Series(L1).png",
+            "/src/assets/DeskMini X300 Series(L2).png",
+            "/src/assets/DeskMini X300 Series(L3).png",
+            "/src/assets/DeskMini X300 Series(L4).png"
         ],
         "shortdesc": "Adatto a chi cerca una soluzione economica e performante",
         "description": "Un mini PC compatto ed economico! Basato su Asrock DeskMini X300",
-        "link": "https://asrock.com/nettop/AMD/DeskMini%20X300%20Series/index.it.asp",
+        "link": "https://asrock.com/nettop/AMD/DeskMini X300 Series/index.it.asp",
         "price": 200,
         "size": "155 x 155 x 80 mm"
     },
@@ -18,15 +18,28 @@
         "name": "Mini PC Intel",
         "attributes": ["cpu-lga1700", "ram", "ssd", "wifi", "vesa", "usb2", "os"],
         "images": [
-            "https://asrock.com/nettop/photo/DeskMini%20B760%20Series(L1).png",
-            "https://asrock.com/nettop/photo/DeskMini%20B760%20Series(L2).png",
-            "https://asrock.com/nettop/photo/DeskMini%20B760%20Series(L3).png",
-            "https://asrock.com/nettop/photo/DeskMini%20B760%20Series(L4).png"
+            "/src/assets/DeskMini B760 Series(L1).png",
+            "/src/assets/DeskMini B760 Series(L2).png",
+            "/src/assets/DeskMini B760 Series(L3).png",
+            "/src/assets/DeskMini B760 Series(L4).png"
         ],
         "shortdesc": "Adatto a chi cerca stabilità e affidabilità",
         "description": "Con i potenti processori Intel di ultima generazione! Basato su Asrock DeskMini B760",
-        "link": "https://asrock.com/nettop/Intel/DeskMini%20B760%20Series/index.it.asp",
+        "link": "https://asrock.com/nettop/Intel/DeskMini B760 Series/index.it.asp",
         "price": 275,
         "size": "155 x 155 x 80 mm"
+    },
+    "coolermaster-masterbox-nr200p": {
+        "name": "Mini PC Gaming Intel Colorato",
+        "attributes": ["cpu-lga1700", "ram", "ssd", "os"],
+        "images": [
+            "/src/assets/nr200p_colour_webpages_4000x4000_gallery-13-zoom.png",
+            "/src/assets/nr200p_colour_webpages_4000x4000_gallery-1-zoom.png",
+            "/src/assets/nr200p_colour_webpages_4000x4000_gallery-16-zoom.png"
+        ],
+        "shortdesc": "Per chi vuole giocare, ma senza rinunciare allo spazio",
+        "description": "Basato su CoolerMaster MasterBox NR200P",
+        "price": 465,
+        "size": "376 x 185 x 292 mm"
     }
 }

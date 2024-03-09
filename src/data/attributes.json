@@ -33,6 +33,12 @@
             "2TB": 145
         }
     },
+    "gpu": {
+        "label": "Scheda video",
+        "options": {
+            "RX6400": 165
+        }
+    },
     "wifi": {
         "label": "Wi-Fi",
         "options": {

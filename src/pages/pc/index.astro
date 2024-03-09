@@ -1,5 +1,6 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+import PcCarousel from "../../components/PcCarousel.astro";
 import bases from "../../data/bases.json";
 ---
 
@@ -9,23 +10,7 @@ import bases from "../../data/bases.json";
             Object.entries(bases).map(([id, properties]) => (
                 <div class="card w-96 h-[512px] bg-base-100 shadow-xl">
                     <figure class="flex-col">
-                        <div class="carousel w-full">
-                            {properties.images.map((image: string, i: number) => (
-                                <div
-                                    id={`${id}-${i}`}
-                                    class="carousel-item w-full"
-                                >
-                                    <img src={image} class="w-full h-fit" />
-                                </div>
-                            ))}
-                        </div>
-                        <div class="flex justify-center w-full py-2 gap-2">
-                            {properties.images.map((image: string, i: number) => (
-                                <a href={`#${id}-${i}`} class="btn btn-xs">
-                                    {i + 1}
-                                </a>
-                            ))}
-                        </div>
+                        <PcCarousel id={id} imagePaths={properties.images} />
                     </figure>
                     <div class="card-body">
                         <h2 class="card-title">{properties.name}</h2>
