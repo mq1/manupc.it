@@ -1,16 +1,19 @@
 ---
 import type { ImageMetadata } from "astro";
 import { Image } from "astro:assets";
+import bases from "../data/bases.json";
 
 interface Props {
     id: string;
-    imagePaths: string[];
 }
 
-const { id, imagePaths } = Astro.props;
+const { id } = Astro.props;
+
 const images = import.meta.glob<{ default: ImageMetadata }>(
     "/src/assets/*.{jpeg,jpg,png,gif}",
 );
+
+const imagePaths = bases[id].images;
 ---
 
 <div class="carousel w-full">

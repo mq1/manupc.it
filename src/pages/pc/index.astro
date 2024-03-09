@@ -7,14 +7,14 @@ import bases from "../../data/bases.json";
 <Layout title="ManuPC | PC">
     <div class="flex flex-wrap gap-4 h-full items-center justify-center">
         {
-            Object.entries(bases).map(([id, properties]) => (
+            Object.entries(bases).map(([id, details]) => (
                 <div class="card w-96 h-[512px] bg-base-100 shadow-xl">
                     <figure class="flex-col">
-                        <PcCarousel id={id} imagePaths={properties.images} />
+                        <PcCarousel id={id} />
                     </figure>
                     <div class="card-body">
-                        <h2 class="card-title">{properties.name}</h2>
-                        <p>{properties.shortdesc}</p>
+                        <h2 class="card-title">{details.name}</h2>
+                        <p>{details.shortdesc}</p>
                         <div class="card-actions justify-end mt-4">
                             <a class="btn btn-primary w-full" href={`/pc/${id}`}>
                                 Configura ora 🛠️
