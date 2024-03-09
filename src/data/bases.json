@@ -31,7 +31,7 @@
     },
     "coolermaster-masterbox-nr200p": {
         "name": "Mini PC Gaming Intel Colorato",
-        "attributes": ["cpu-lga1700", "ram", "ssd", "os"],
+        "attributes": ["cpu-lga1700", "ram", "gpu", "ssd", "os"],
         "images": [
             "/src/assets/nr200p_colour_webpages_4000x4000_gallery-13-zoom.png",
             "/src/assets/nr200p_colour_webpages_4000x4000_gallery-1-zoom.png",
