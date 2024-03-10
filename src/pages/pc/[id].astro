@@ -1,38 +1,38 @@
 ---
 import type { GetStaticPaths } from "astro";
-import bases from "../../data/bases.json";
+import { bases } from "../../data/bases";
 import Layout from "../../layouts/Layout.astro";
 import Configuratore from "../../components/Configuratore.svelte";
 import PcCarousel from "../../components/PcCarousel.astro";
 
 export const getStaticPaths = (() =>
-  Object.keys(bases).map((id) => ({
-    params: { pc: id },
+  bases.map(base => ({
+    params: { id: base.id },
   }))) satisfies GetStaticPaths;
 
-const { pc } = Astro.params;
+const { id } = Astro.params;
 
-const details = bases[pc];
+const base = bases.find(base => base.id === id)!;
 ---
 
-<Layout title={`ManuPC | ${details.name}`}>
+<Layout title={`ManuPC | ${base.name}`}>
   <div class="flex w-full items-center justify-center">
     <div class="card max-w-96 bg-base-100 shadow-xl">
       <figure class="flex flex-col">
-        <PcCarousel id={pc} />
+        <PcCarousel base={base} />
       </figure>
       <div class="card-body">
-        <h1 class="card-title">{details.name}</h1>
-        <p>{details.description}</p>
-        <p>Dimensioni: {details.size}</p>
+        <h1 class="card-title">{base.name}</h1>
+        <p>{base.description}</p>
+        <p>Dimensioni: {base.size}</p>
 
         {
           () => {
-            if (details.link) {
+            if (base.link) {
               return (
                 <p>
                   Per saperne di più clicca{" "}
-                  <a href={details.link} target="_blank" class="text-primary">
+                  <a href={base.link} target="_blank" class="text-primary">
                     questo link
                   </a>
                 </p>
@@ -43,7 +43,7 @@ const details = bases[pc];
 
         <hr class="text-neutral-500 m-4" />
 
-        <Configuratore pc={pc} client:only />
+        <Configuratore base={base} client:only />
 
         <hr class="text-neutral-500 m-4" />
 
