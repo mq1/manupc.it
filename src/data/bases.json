@@ -29,7 +29,23 @@
         "price": 275,
         "size": "155 x 155 x 80 mm"
     },
-    "coolermaster-masterbox-nr200p": {
+    "coolermaster-masterbox-nr200p-amd": {
+        "name": "Mini PC Gaming AMD Colorato",
+        "attributes": ["nr200p", "cpu-am5", "ram", "gpu", "ssd", "os"],
+        "images": [
+            "/src/assets/nr200p_colour_webpages_4000x4000_gallery-13-zoom.png",
+            "/src/assets/nr200p_colour_webpages_4000x4000_gallery-1-zoom.png",
+            "/src/assets/nr200p_colour_webpages_4000x4000_gallery-16-zoom.png",
+            "/src/assets/nr200p_colour_webpages_4000x4000_gallery-6-zoom.png",
+            "/src/assets/nr200p-gallery-1-zoom.png",
+            "/src/assets/nr200p-gallery-10-zoom.png"
+        ],
+        "shortdesc": "Per chi vuole giocare, ma senza rinunciare allo spazio. Disponibile in varie colorazioni!",
+        "description": "Basato su CoolerMaster MasterBox NR200P e scheda madre con Wi-Fi incluso!",
+        "price": 350,
+        "size": "376 x 185 x 292 mm"
+    },
+    "coolermaster-masterbox-nr200p-intel": {
         "name": "Mini PC Gaming Intel Colorato",
         "attributes": ["nr200p", "cpu-lga1700", "ram", "gpu", "ssd", "os"],
         "images": [
@@ -40,8 +56,8 @@
             "/src/assets/nr200p-gallery-1-zoom.png",
             "/src/assets/nr200p-gallery-10-zoom.png"
         ],
-        "shortdesc": "Per chi vuole giocare, ma senza rinunciare allo spazio",
-        "description": "Basato su CoolerMaster MasterBox NR200P",
+        "shortdesc": "Per chi vuole giocare, ma senza rinunciare allo spazio. Disponibile in varie colorazioni!",
+        "description": "Basato su CoolerMaster MasterBox NR200P e scheda madre con Wi-Fi incluso!",
         "price": 315,
         "size": "376 x 185 x 292 mm"
     }

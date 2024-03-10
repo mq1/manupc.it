@@ -8,6 +8,12 @@
             "Ryzen 7 5700G": 270
         }
     },
+    "cpu-am5": {
+        "label": "Processore",
+        "options": {
+            "Ryzen 5 7600X": 285
+        }
+    },
     "cpu-lga1700": {
         "label": "Processore",
         "options": {
