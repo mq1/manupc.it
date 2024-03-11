@@ -1,4 +1,22 @@
-export const attributes = {
+export type AttributeName =
+  | "cpu-am4"
+  | "cpu-am5"
+  | "cpu-lga1700"
+  | "ram"
+  | "ssd"
+  | "wifi"
+  | "vesa"
+  | "usb2"
+  | "os"
+  | "nr200p"
+  | "gpu";
+
+export interface Attribute {
+  label: string;
+  options: { [key: string]: number };
+}
+
+export const attributes: Record<AttributeName, Attribute> = {
   "cpu-am4": {
     label: "Processore",
     options: {

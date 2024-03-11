@@ -1,34 +1,44 @@
 <script lang="ts">
-  import { attributes } from "../data/attributes";
+  import { attributes, type AttributeName } from "../data/attributes";
   import type { Base } from "../data/bases";
 
   export let base: Base;
 
-  let priceMap = {};
+  let priceMap: { [key: string]: string } = {};
 
   const sendEmail = () => {
     let text = `mailto:manu@manupc.it?subject=Ordine&body=Ciao, vorrei ordinare questo PC<br><br>${base.name}`;
 
     if (priceMap !== undefined) {
       Object.entries(priceMap).forEach(([attribute, selected]) => {
-        text += `<br>${attributes[attribute].label}: ${selected[0]}`;
+        text += `<br>${attributes[attribute as AttributeName].label}: ${selected[0]}`;
       });
     }
 
     window.location.href = text;
   };
 
-  const getTotal = () => {
+  const getDefaultTotal = () => {
     let total = base.price;
 
-    Object.entries(priceMap).forEach(([attribute, selected]) => {
-      total += attributes[attribute].options[selected];
+    base.attributes.forEach(name => {
+      total += Object.values(attributes[name].options)[0];
     });
 
     return total;
   };
 
-  let total = getTotal();
+  const getTotal = () => {
+    let total = base.price;
+
+    Object.entries(priceMap).forEach(([attribute, selected]) => {
+      total += attributes[attribute as AttributeName].options[selected];
+    });
+
+    return total;
+  };
+
+  let total = getDefaultTotal();
 </script>
 
 <div class="flex flex-col gap-2">

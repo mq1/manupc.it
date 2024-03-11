@@ -16,7 +16,7 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
 
 <div class="carousel w-full">
     {
-        base.images.map((path: string, i: number) => {
+        base.images.map((path, i) => {
             if (!images[path])
                 throw new Error(
                     `"${path}" does not exist in glob: "src/assets/*.{jpeg,jpg,png,gif}"`,
@@ -36,7 +36,7 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
 </div>
 <div class="flex justify-center w-full py-2 gap-2">
     {
-        base.images.map((path: string, i: number) => (
+        base.images.map((_, i) => (
             <a href={`#${base.id}-${i}`} class="btn btn-xs">
                 {i + 1}
             </a>
