@@ -21,7 +21,7 @@
   const getDefaultTotal = () => {
     let total = base.price;
 
-    base.attributes.forEach(name => {
+    base.attributes.forEach((name) => {
       total += Object.values(attributes[name].options)[0];
     });
 

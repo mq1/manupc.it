@@ -1,11 +1,9 @@
-import { attributes } from "./attributes";
-
-type Attribute = keyof typeof attributes;
+import type { AttributeName } from "./attributes";
 
 export interface Base {
   id: string;
   name: string;
-  attributes: Attribute[];
+  attributes: AttributeName[];
   images: string[];
   shortdesc: string;
   description: string;
