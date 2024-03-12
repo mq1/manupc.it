@@ -65,7 +65,8 @@
     </label>
   {/each}
 
-  <hr class="text-neutral-500 my-8" />
+  <div class="divider" />
+
   <p class="text-center">Totale: {total} € + 10€ di spedizione</p>
 
   <button class="btn btn-primary" on:click={sendEmail}
