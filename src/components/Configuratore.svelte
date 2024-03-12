@@ -45,18 +45,24 @@
   <p>PC base: {base.price} €</p>
 
   {#each base.attributes as attribute}
-    <hr class="text-neutral-500 my-2" />
-    <p>{attributes[attribute].label}</p>
-    <select
-      bind:value={priceMap[attribute]}
-      on:change={() => {
-        total = getTotal();
-      }}
-    >
-      {#each Object.entries(attributes[attribute].options) as [option, price]}
-        <option value={option}>{option} (+{price} €)</option>
-      {/each}
-    </select>
+    <div />
+
+    <label class="form-control w-full max-w-xs">
+      <div class="label">
+        <span class="label-text">{attributes[attribute].label}</span>
+      </div>
+      <select
+        bind:value={priceMap[attribute]}
+        on:change={() => {
+          total = getTotal();
+        }}
+        class="select select-bordered"
+      >
+        {#each Object.entries(attributes[attribute].options) as [option, price]}
+          <option value={option}>{option} (+{price} €)</option>
+        {/each}
+      </select>
+    </label>
   {/each}
 
   <hr class="text-neutral-500 my-8" />
@@ -66,8 +72,9 @@
     >Contattami per ordinarlo</button
   >
   <p class="text-sm text-center">
-    O invia una email a <a href="mailto:manu@manupc.it" class="text-primary"
-      >manu@manupc.it</a
+    O invia una email a <a
+      href="mailto:manu@manupc.it"
+      class="link link-primary">manu@manupc.it</a
     >
   </p>
 </div>
