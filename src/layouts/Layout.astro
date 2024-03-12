@@ -1,9 +1,10 @@
 ---
 import { Image } from "astro:assets";
 import logoImage from "../assets/logo.jpeg";
+import { Icon } from "astro-icon/components";
 
 interface Props {
-	title: string;
+  title: string;
 }
 
 const { title } = Astro.props;
@@ -11,50 +12,41 @@ const { title } = Astro.props;
 
 <!doctype html>
 <html lang="it">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Il tuo mini PC, come lo vuoi tu" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href={logoImage.src} />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body class="flex flex-col w-full h-screen items-center">
-		<div class="navbar bg-base-100">
-			<a class="btn btn-ghost text-xl" href="/">
-				<Image
-					src={logoImage}
-					alt="logo"
-					width={32}
-					class="rounded-lg"
-				/>
-				ManuPC.it
-			</a>
-		</div>
-		<main class="w-full flex-1 p-4 bg-base-200">
-			<slot />
-		</main>
-		<footer
-			class="text-sm p-10 bg-base-100 w-full flex flex-col gap-8 items-center justify-center"
-		>
-			<p class="flex gap-8">
-				<a
-					href="https://www.instagram.com/manupc.it/"
-					class="text-rose-500 font-bold">Instagram ↗</a
-				>
-				<a
-					href="https://www.tiktok.com/@manupc.it"
-					class="text-blue-500 font-bold">TikTok ↗</a
-				>
-				<a href="mailto:manu@manupc.it" class="font-bold"
-					>manu@manupc.it</a
-				>
-			</p>
-			<div class="flex divide-x-2 divide-neutral-400">
-				<p class="px-2">Copyright (c) 2024 Quarneti Manuel</p>
-				<p class="px-2">Cotignola 48033, Via Fratelli Kennedy 21</p>
-				<p class="px-2">P. Iva: 02764790396</p>
-			</div>
-		</footer>
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Il tuo mini PC, come lo vuoi tu" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href={logoImage.src} />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body class="flex flex-col w-full h-screen items-center">
+    <div class="navbar bg-base-100">
+      <a class="btn btn-ghost text-xl" href="/">
+        <Image src={logoImage} alt="logo" width={32} class="rounded-lg" />
+        ManuPC.it
+      </a>
+    </div>
+    <main class="w-full flex-1 p-4 bg-base-200">
+      <slot />
+    </main>
+    <footer class="footer footer-center p-10 bg-base-100 text-base-content rounded">
+      <aside>
+        <p class="font-bold">ManuPC.it</p>
+        <p>
+          Copyright (c) 2024 Quarneti Manuel<br />
+          Cotignola 48033, Via Fratelli Kennedy 21<br />
+          P. Iva: 02764790396
+        </p>
+      </aside>
+      <nav class="grid grid-flow-col gap-4">
+        <a href="https://www.instagram.com/manupc.it" target="_blank">
+          <Icon name="simple-icons:instagram" class="text-2xl" />
+        </a>
+        <a href="https://www.tiktok.com/@manupc.it" target="_blank">
+          <Icon name="simple-icons:tiktok" class="text-2xl" />
+        </a>
+      </nav>
+    </footer>
+  </body>
 </html>

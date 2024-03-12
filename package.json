@@ -14,6 +14,7 @@
     "@astrojs/svelte": "^5.2.0",
     "@astrojs/tailwind": "^5.1.0",
     "@iconify-json/noto": "^1.1.18",
+    "@iconify-json/simple-icons": "^1.1.95",
     "astro": "^4.4.9",
     "astro-icon": "^1.1.0",
     "daisyui": "^4.7.2",
