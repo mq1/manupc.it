@@ -5,11 +5,11 @@ import { bases } from "../../data/bases";
 ---
 
 <Layout title="ManuPC | PC">
-    <div class="flex flex-wrap gap-4 h-full items-center justify-center">
+    <div class="flex flex-wrap gap-4 items-center justify-center h-full">
         {
             bases.map(base => (
-                <div class="card w-96 h-[512px] bg-base-100 shadow-xl">
-                    <figure class="flex-col">
+                <div class="card w-96 bg-base-100 shadow-xl h-[600px]">
+                    <figure class="flex-col bg-indigo-200 dark:bg-indigo-800">
                         <PcCarousel base={base} />
                     </figure>
                     <div class="card-body">

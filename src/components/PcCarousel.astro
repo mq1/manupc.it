@@ -27,7 +27,8 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
                     <Image
                         src={images[path]()}
                         alt={`${base.id}-${i}`}
-                        class="w-full object-contain"
+                        height={320}
+                        class="h-[320px] w-full object-contain"
                     />
                 </div>
             );
