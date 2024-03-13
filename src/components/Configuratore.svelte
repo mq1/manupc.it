@@ -41,7 +41,7 @@
 </script>
 
 <div class="flex flex-col gap-2">
-  <p>PC base: {base.price} €</p>
+  <p>Prezzo base: {base.price} €</p>
 
   {#each base.attributes as attribute}
     <div />
