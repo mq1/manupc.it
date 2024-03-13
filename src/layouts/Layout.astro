@@ -21,22 +21,26 @@ const { title } = Astro.props;
   </head>
   <body class="flex flex-col h-screen">
     <div class="navbar bg-base-100">
-      <div class="flex-1">
+      <div class="navbar-start">
+        <div class="dropdown">
+          <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
+            <Icon name="mdi:menu" class="text-xl" />
+          </div>
+          <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+            <li><a href="/info">Info</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="navbar-center">
         <a class="btn btn-ghost text-xl" href="/">ManuPC.it</a>
       </div>
-      <div class="flex-none">
-        <ul class="menu menu-horizontal px-1">
-          <li>
-            <a href="https://www.instagram.com/manupc.it" target="_blank">
-              <Icon name="simple-icons:instagram" class="text-2xl" />
-            </a>
-          </li>
-          <li>
-            <a href="https://www.tiktok.com/@manupc.it" target="_blank">
-              <Icon name="simple-icons:tiktok" class="text-2xl" />
-            </a>
-          </li>
-        </ul>
+      <div class="navbar-end">
+        <a href="https://www.instagram.com/manupc.it" target="_blank" class="btn btn-ghost btn-circle">
+          <Icon name="simple-icons:instagram" class="text-2xl" />
+        </a>
+        <a href="https://www.tiktok.com/@manupc.it" target="_blank" class="btn btn-ghost btn-circle">
+          <Icon name="simple-icons:tiktok" class="text-2xl" />
+        </a>
       </div>
     </div>
     <main class="flex-1 p-8">
