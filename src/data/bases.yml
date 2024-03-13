@@ -46,13 +46,13 @@
 
 - id: mini-pc-gaming-amd
   name: Mini PC Gaming AMD Colorato
-  hidden: true
   attributes:
     - nr200p
     - cpu-am5
     - ram
     - gpu
     - ssd
+    - cooler
     - os
   images:
     - /src/assets/nr200p_colour_webpages_4000x4000_gallery-1-zoom.png
@@ -68,13 +68,13 @@
 
 - id: mini-pc-gaming-intel
   name: Mini PC Gaming Intel Colorato
-  hidden: true
   attributes:
     - nr200p
     - cpu-lga1700
     - ram
     - gpu
     - ssd
+    - cooler
     - os
   images:
     - /src/assets/nr200p_colour_webpages_4000x4000_gallery-1-zoom.png
