@@ -7,6 +7,7 @@
     - wifi
     - vesa
     - usb2
+    - low-profile-cooler
     - os
   images:
     - /src/assets/DeskMini X300 Series(L1).png
@@ -28,6 +29,7 @@
     - wifi
     - vesa
     - usb2
+    - low-profile-cooler
     - os
   images:
     - /src/assets/DeskMini B760 Series(L1).png

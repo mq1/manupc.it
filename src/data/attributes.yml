@@ -17,6 +17,12 @@ cpu-lga1700:
     Intel Core i5-12400: 205
     Intel Core i5-14500: 330
 
+low-profile-cooler:
+  label: Ventola più silenziosa
+  options:
+    "No": 0
+    Sì: 30
+
 ram:
   label: RAM
   options:
