@@ -16,6 +16,7 @@
     "@iconify-json/mdi": "^1.1.64",
     "@iconify-json/noto": "^1.1.18",
     "@iconify-json/simple-icons": "^1.1.95",
+    "@rollup/plugin-yaml": "^4.1.2",
     "@tailwindcss/typography": "^0.5.10",
     "astro": "^4.4.9",
     "astro-icon": "^1.1.0",

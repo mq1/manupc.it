@@ -1,8 +1,7 @@
 <script lang="ts">
-  import { attributes, type AttributeName } from "../data/attributes";
-  import type { Base } from "../data/bases";
+  import attributes from "../data/attributes.yml";
 
-  export let base: Base;
+  export let base;
 
   let priceMap: { [key: string]: string } = {};
 
@@ -11,7 +10,7 @@
 
     if (priceMap !== undefined) {
       Object.entries(priceMap).forEach(([attribute, selected]) => {
-        text += `<br>${attributes[attribute as AttributeName].label}: ${selected[0]}`;
+        text += `<br>${attributes[attribute].label}: ${selected[0]}`;
       });
     }
 
@@ -32,7 +31,7 @@
     let total = base.price;
 
     Object.entries(priceMap).forEach(([attribute, selected]) => {
-      total += attributes[attribute as AttributeName].options[selected];
+      total += attributes[attribute].options[selected];
     });
 
     return total;
