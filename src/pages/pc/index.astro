@@ -8,7 +8,7 @@ import bases from "../../data/bases.yml";
     <div class="flex flex-wrap gap-4 items-center justify-center h-full">
         {
             bases.filter(base => !base.hidden).map(base => (
-                <div class="card w-96 bg-base-100 shadow-xl h-[600px]">
+                <div class="card w-96 bg-base-100 shadow-xl h-[600px] border">
                     <figure class="flex-col bg-indigo-200 dark:bg-indigo-800">
                         <PcCarousel base={base} />
                     </figure>
