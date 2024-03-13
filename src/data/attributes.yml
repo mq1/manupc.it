@@ -20,7 +20,7 @@ cpu-lga1700:
 cooler:
   label: Dissipatore CPU
   options:
-    Base: 25
+    Sì: 25
 
 low-profile-cooler:
   label: Ventola più silenziosa
