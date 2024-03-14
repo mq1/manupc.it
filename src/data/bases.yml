@@ -1,7 +1,7 @@
 - id: mini-pc-amd
   name: Mini PC AMD
   attributes:
-    - cpu-am4
+    - cpu-am4-igpu
     - ram
     - ssd
     - wifi
@@ -23,7 +23,7 @@
 - id: mini-pc-intel
   name: Mini PC Intel
   attributes:
-    - cpu-lga1700
+    - cpu-lga1700-igpu
     - ram
     - ssd
     - wifi

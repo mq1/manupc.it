@@ -1,4 +1,4 @@
-cpu-am4:
+cpu-am4-igpu:
   label: Processore
   options:
     Ryzen 3 3200G: 95
@@ -8,14 +8,22 @@ cpu-am4:
 cpu-am5:
   label: Processore
   options:
+    Ryzen 5 7500F: 245
     Ryzen 5 7600X: 280
 
-cpu-lga1700:
+cpu-lga1700-igpu:
   label: Processore
   options:
     Intel Core i3-12100: 140
     Intel Core i5-12400: 195
     Intel Core i5-14500: 330
+
+cpu-lga1700:
+  label: Processore
+  options:
+    Intel Core i3-12100F: 110
+    Intel Core i5-12400F: 170
+    Intel Core i5-13400F: 250
 
 cooler:
   label: Dissipatore CPU
