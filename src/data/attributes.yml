@@ -1,7 +1,7 @@
 cpu-am4-igpu:
   label: Processore
   options:
-    Ryzen 3 3200G: 95
+    Ryzen 3 3200G: 110
     Ryzen 5 5600G: 155
     Ryzen 7 5700G: 215
 
@@ -29,14 +29,13 @@ cooler:
   label: Dissipatore CPU
   options:
     Base: 25
-    Noctua: 95
+    Premium (Noctua): 95
 
 low-profile-cooler:
   label: Dissipatore CPU
   options:
-    Integrato: 0
-    Più silenzioso: 30
-    Noctua: 70
+    Base: 0
+    Premium (Noctua): 70
 
 ram:
   label: RAM
