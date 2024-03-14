@@ -3,7 +3,7 @@ cpu-am4:
   options:
     Ryzen 3 3200G: 95
     Ryzen 5 5600G: 155
-    Ryzen 7 5700G: 235
+    Ryzen 7 5700G: 215
 
 cpu-am5:
   label: Processore
@@ -14,13 +14,14 @@ cpu-lga1700:
   label: Processore
   options:
     Intel Core i3-12100: 140
-    Intel Core i5-12400: 205
+    Intel Core i5-12400: 195
     Intel Core i5-14500: 330
 
 cooler:
   label: Dissipatore CPU
   options:
-    Sì: 25
+    Base: 25
+    Premium: 95
 
 low-profile-cooler:
   label: Ventola più silenziosa
@@ -77,8 +78,8 @@ os:
 nr200p:
   label: Case
   options:
+    Viola: 95
     Nero: 110
     Bianco: 110
     Rosa: 130
     Azzurro: 130
-    Viola: 145
