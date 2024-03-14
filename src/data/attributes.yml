@@ -24,10 +24,10 @@ cooler:
     Noctua: 95
 
 low-profile-cooler:
-  label: Ventola più silenziosa
+  label: Dissipatore CPU
   options:
-    "No": 0
-    Sì: 30
+    Integrato: 0
+    Più silenzioso: 30
     Noctua: 70
 
 ram:
