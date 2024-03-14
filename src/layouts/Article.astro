@@ -1,0 +1,11 @@
+---
+import Layout from "./Layout.astro";
+
+const { frontmatter } = Astro.props;
+---
+
+<Layout title={`ManuPC | ${frontmatter.title}`}>
+  <article class="prose">
+    <slot />
+  </article>
+</Layout>

@@ -1,3 +1,8 @@
+---
+layout: ../layouts/Article.astro
+title: Info
+---
+
 Questo sito è stato costruito grazie a:
 
 - [Astro](https://astro.build/)
