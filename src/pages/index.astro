@@ -1,7 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { Icon } from 'astro-icon/components';
-import { Image } from 'astro:assets';
+import { Icon } from "astro-icon/components";
+import { Image } from "astro:assets";
 import logoImage from "../assets/logo.jpeg";
 ---
 
@@ -10,54 +10,67 @@ import logoImage from "../assets/logo.jpeg";
     <div class="flex flex-col gap-y-4 justify-center items-center">
       <Image src={logoImage} alt="logo" height={200} class="rounded-3xl" />
       <p>Il tuo mini PC, come lo vuoi tu</p>
-      <a href="/pc" class="btn btn-primary">Inizia la configurazione del tuo PC →</a>
-      <p class="text-center">Non sai cosa scegliere? Scrivimi a <a href="mailto:manupc.it" class="link link-primary">manu@manupc.it</a>
-    </div>
+      <a href="/pc" class="btn btn-primary"
+        >Inizia la configurazione del tuo PC →</a
+      >
+      <p class="text-center">
+        Non sai cosa scegliere? Scrivimi a <a
+          href="mailto:manupc.it"
+          class="link link-primary">manu@manupc.it</a
+        >
+      </p>
 
-    <br />
+      <br />
 
-    <h2 class="text-xl sm:text-3xl mt-32 mb-8 flex items-center gap-2">
-      <Icon name="noto:star" />
-      Perchè scegliere i miei mini PC?
-    </h2>
+      <h2 class="text-xl sm:text-3xl mt-32 mb-8 flex items-center gap-2">
+        <Icon name="noto:star" />
+        Perchè scegliere i miei mini PC?
+      </h2>
 
-    <div class="flex flex-wrap gap-4 justify-center">
-      <div class="card w-72 bg-base-100 shadow-xl border">
-        <figure class="px-10 pt-10">
-          <Icon name="noto:ok-hand-light-skin-tone" class="text-9xl" />
-        </figure>
-        <div class="card-body">
-          <h2 class="card-title">Garanzia e assistenza</h2>
-          <p>
-            La garanzia è di due anni su tutti i prodotti
-            e se hai bisogno di aiuto nella prima installazione di un PC puoi scrivermi a
-            <a href="mailto:manu@manupc.it" class="link link-primary">manu@manupc.it</a>
-          </p>
+      <div class="flex flex-wrap gap-4 justify-center">
+        <div class="card w-72 bg-base-100 shadow-xl border">
+          <figure class="px-10 pt-10">
+            <Icon name="noto:ok-hand-light-skin-tone" class="text-9xl" />
+          </figure>
+          <div class="card-body">
+            <h2 class="card-title">Garanzia e assistenza</h2>
+            <p>
+              La garanzia è di due anni su tutti i prodotti e se hai bisogno di
+              aiuto nella prima installazione di un PC, scrivimi a
+              <a href="mailto:manu@manupc.it" class="link link-primary"
+                >manu@manupc.it</a
+              >
+            </p>
+          </div>
         </div>
-      </div>
-      <div class="card w-72 bg-base-100 shadow-xl border">
-        <figure class="px-10 pt-10">
-          <Icon name="noto:man-technologist-light-skin-tone" class="text-9xl" />
-        </figure>
-        <div class="card-body">
-          <h2 class="card-title">Personalizzati</h2>
-          <p>
-            Scegli tu i componenti del tuo pc in base alle tue esigenze!
-            Io provvederò a recuperare tutti i componenti e ad assemblarlo per te
-          </p>
+        <div class="card w-72 bg-base-100 shadow-xl border">
+          <figure class="px-10 pt-10">
+            <Icon
+              name="noto:man-technologist-light-skin-tone"
+              class="text-9xl"
+            />
+          </figure>
+          <div class="card-body">
+            <h2 class="card-title">Personalizzati</h2>
+            <p>
+              Personalizza il tuo PC! Scegli i componenti che meglio si adattano
+              alle tue esigenze, e io mi occuperò di recuperarli e assemblarli
+              per te.
+            </p>
+          </div>
         </div>
-      </div>
-      <div class="card w-72 bg-base-100 shadow-xl border">
-        <figure class="px-10 pt-10">
-          <Icon name="noto:hammer-and-wrench" class="text-9xl" />
-        </figure>
-        <div class="card-body">
-          <h2 class="card-title">Espandibili</h2>
-          <p>
-            Invece di buttare il vecchio mini PC (come accade purtroppo con molti mini PC),
-            puoi potenziare quello che hai già!
-            Presto saranno disponibili anche delle guide per aiutarti in questa impresa
-          </p>
+        <div class="card w-72 bg-base-100 shadow-xl border">
+          <figure class="px-10 pt-10">
+            <Icon name="noto:hammer-and-wrench" class="text-9xl" />
+          </figure>
+          <div class="card-body">
+            <h2 class="card-title">Espandibili</h2>
+            <p>
+              Non gettare via il tuo vecchio mini PC! Puoi invece potenziarlo e
+              farlo rivivere. Presto saranno disponibili guide per aiutarti in
+              questa impresa.
+            </p>
+          </div>
         </div>
       </div>
     </div>
