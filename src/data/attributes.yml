@@ -21,13 +21,14 @@ cooler:
   label: Dissipatore CPU
   options:
     Base: 25
-    Premium: 95
+    Noctua: 95
 
 low-profile-cooler:
   label: Ventola più silenziosa
   options:
     "No": 0
     Sì: 30
+    Noctua: 70
 
 ram:
   label: RAM
