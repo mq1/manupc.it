@@ -20,3 +20,7 @@ title: Scelta del PC
    - **Windows 11 Home**: Per uso domestico.
    - **Windows 11 Pro**: Per uso professionale.
    - **Linux Mint**: Sceglilo solo se sei sicuro di voler utilizzare Linux Mint.
+
+## Mini PC gaming
+
+Coming soon...
