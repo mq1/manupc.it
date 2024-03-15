@@ -17,4 +17,4 @@ title: Scelta del PC
 3. **Sistema Operativo**:
    - **Windows 11 Home**: Per uso domestico.
    - **Windows 11 Pro**: Per uso professionale.
-   - **Linux Mint**: Sceglilo solo se sei sicuro di voler utilizzare Linux Mint.
+   - **Linux**: Sceglilo solo se sei sicuro di voler utilizzare Linux.

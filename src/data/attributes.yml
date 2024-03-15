@@ -82,6 +82,8 @@ os:
     Windows 11 Home: 10
     Windows 11 Pro: 15
     Linux Mint: 0
+    Linux Ubuntu: 0
+    Linux Fedora: 0
 
 nr200p:
   label: Case
