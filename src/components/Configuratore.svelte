@@ -6,11 +6,11 @@
   let priceMap: { [key: string]: string } = {};
 
   const sendEmail = () => {
-    let text = `mailto:manu@manupc.it?subject=Ordine&body=Ciao, vorrei ordinare questo PC<br><br>${base.name}`;
+    let text = `mailto:manu@manupc.it?subject=Ordine&body=Ciao, vorrei ordinare questo PC\n\n${base.name}`;
 
     if (priceMap !== undefined) {
       Object.entries(priceMap).forEach(([attribute, selected]) => {
-        text += `<br>${attributes[attribute].label}: ${selected[0]}`;
+        text += `\n${attributes[attribute].label}: ${selected}`;
       });
     }
 
