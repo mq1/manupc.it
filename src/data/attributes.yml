@@ -2,6 +2,8 @@ cpu-am4-igpu:
   label: Processore
   options:
     Ryzen 3 3200G: 110
+    Ryzen 3 4300G: 120 # temporary
+    Ryzen 5 4600G: 125 # temporary
     Ryzen 5 5600G: 155
     Ryzen 7 5700G: 215
 
