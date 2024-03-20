@@ -1,3 +1,28 @@
+deskmini-x300:
+  label: Asrock DeskMini X300
+  options:
+    Sì: 240
+
+deskmini-b760:
+  label: Asrock DeskMini B760
+  options:
+    Sì: 320
+
+mobo-am5:
+  label: Scheda Madre (Wi-Fi e Bluetooth)
+  options:
+    Sì: 220 # A620I
+
+mobo-lga1700:
+  label: Scheda Madre (Wi-Fi e Bluetooth)
+  options:
+    Sì: 190 # B760M
+
+psu:
+  label: Alimentatore
+  options:
+    Sì: 90 # 450W
+
 cpu-am4-igpu:
   label: Processore
   options:
@@ -90,8 +115,8 @@ os:
 nr200p:
   label: Case
   options:
-    Viola: 95
-    Nero: 110
-    Bianco: 110
-    Rosa: 130
+    Nero: 95
+    Bianco: 95
+    Rosa: 115
+    Viola: 115
     Azzurro: 130

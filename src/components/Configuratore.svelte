@@ -1,9 +1,9 @@
-<script lang="ts">
+<script>
   import attributes from "../data/attributes.yml";
 
   export let base;
 
-  let priceMap: { [key: string]: string } = {};
+  let priceMap = {};
 
   const sendEmail = () => {
     let text = `mailto:manu@manupc.it?subject=Ordine&body=Ciao, vorrei ordinare questo PC%0D%0A%0D%0A<br><br>${base.name}`;
@@ -18,7 +18,7 @@
   };
 
   const getDefaultTotal = () => {
-    let total = base.price;
+    let total = 0;
 
     base.attributes.forEach((name) => {
       total += Object.values(attributes[name].options)[0];
@@ -28,7 +28,7 @@
   };
 
   const getTotal = () => {
-    let total = base.price;
+    let total = 0;
 
     Object.entries(priceMap).forEach(([attribute, selected]) => {
       total += attributes[attribute].options[selected];
@@ -41,8 +41,6 @@
 </script>
 
 <div class="flex flex-col gap-2">
-  <p>Prezzo base: {base.price} €</p>
-
   {#each base.attributes as attribute}
     <div />
 
