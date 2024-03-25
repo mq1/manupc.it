@@ -21,7 +21,7 @@ mobo-lga1700:
 psu:
   label: Alimentatore
   options:
-    Sì: 90 # 450W
+    Sì: 60 # 500W
 
 cpu-am4-igpu:
   label: Processore
@@ -80,7 +80,9 @@ ssd:
 gpu:
   label: Scheda video
   options:
-    AMD Radeon RX6400: 180
+    AMD Radeon RX 6400: 180
+    AMD Radeon RX 6500XT: 210
+    AMD Radeon RX 6600: 290
 
 wifi:
   label: Wi-Fi
