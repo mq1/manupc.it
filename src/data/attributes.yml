@@ -88,8 +88,7 @@ wifi:
   label: Wi-Fi
   options:
     "No": 0
-    Wi-Fi 6: 25
-    Wi-Fi 6E: 45
+    Sì: 30
 
 vesa:
   label: Adattatore VESA
