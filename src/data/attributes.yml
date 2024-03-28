@@ -72,8 +72,8 @@ ram:
 ssd:
   label: SSD
   options:
-    256GB: 25
-    512GB: 45
+    250GB: 25
+    500GB: 45
     1TB: 75
     2TB: 140
 
